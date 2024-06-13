@@ -97,9 +97,12 @@ async function init(e) {
           //     remoteVideo.current.srcObject = ev.streams[0];
         };
 
+        const name = "name" + Math.floor(Math.random(10) * 100);
+        console.log(name);
+
         socket.emit("join", {
           room: "1234",
-          name: "name" + Math.floor(Math.random(5) * 10),
+          name,
         });
       })
       .catch((error) => {
