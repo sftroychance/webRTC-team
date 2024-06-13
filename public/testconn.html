@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1"
+    />
+    <title>Peer connection</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <h4>Peer connection</h4>
+
+      <video id="localVideo" playsinline autoplay muted></video>
+      <video id="remoteVideo" playsinline autoplay></video>
+
+      <div class="box">
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          id="call_pc1"
+        >
+          Call PC1
+        </button>
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          id="call_pc2"
+        >
+          Call PC2
+        </button>
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          id="disconnect"
+        >
+          Disconnect
+        </button>
+      </div>
+
+      <div id="errorMsg"></div>
+    </div>
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script type="module" src="./scripts/testconn.js"></script>
+  </body>
+</html>
